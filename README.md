@@ -26,3 +26,14 @@ Compiler: compilation genenerates assembly code (.s files) for the hardware arch
  * Static vs Dynamic linking <br>
  * Contains code and data for allfunctions defined in src                                                                                                      files<br> 
  * Contains global symbol table <br>
+
+---
+# Linker
+
+## 2. Why we use Linker : <br>
+ 1. Understanding linker help us make large programs
+ 2. Avoiding dangersous errors like what happens when we create global variable with the same name in multiple object files
+ 3. understand languge scoping rules
+ 4.uderstand other system concepts , like loading and running programes, vertual memory , paging and memory        mapping
+ 5. understanding linling will enxploit shared libraries
+
