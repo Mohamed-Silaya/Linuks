@@ -50,7 +50,7 @@ Compiler: compilation genenerates assembly code (.s files) for the hardware arch
  * To see address ->[objdump -d -M intel file.o]
 
 ### 2. Linker Symbols:
-* Global Symbols
+* Global Symbols   , can be refrenced by other modules
 * External Symbols , keyword(extern)
 * Local Symbols    , keyword(static)
  
