@@ -37,9 +37,31 @@ Compiler: compilation genenerates assembly code (.s files) for the hardware arch
  4.uderstand other system concepts , like loading and running programes, vertual memory , paging and memory        mapping
  5. understanding linling will enxploit shared libraries
 ## 2. Advantages of Linkers:
-  1.Modularity: we can split it to smaller source files insted of big one ,build libraries of common function       like standerd c library .
-  2. Efficiency: it saves time , if we have 10 files and make change in one we need to compile it only.
+  1.Modularity: we can split it to smaller source files insted of big one ,build libraries of common function        like standerd c library.
+   
+ 2. Efficiency: it saves time , if we have 10 files and make change in one we need to compile it only.
 
 ## 3. what linkers do? :
- 1. Relocation: merge the code and data sections of multple obj files into the code and data sections of final exe.
+ 1. Relocation: merge the code and data sections of multple obj files into the code and data sections of final exe.(The addres change)
  2. Symbol Resolution:Liker associate each symbol refrence with exacly one symbol definition
+
+### 1. Relopcation: 
+ * to make it ->[gcc -c *.c] ->file.o ,, to make exe -> [gcc *.o -o myexe] ,NOTE: it must have main because it needs entery point.
+ * To see address ->[objdump -d -M intel file.o]
+
+### 2. Linker Symbols:
+* Global Symbols
+* External Symbols , keyword(extern)
+* Local Symbols    , keyword(static)
+ 
+
+
+
+
+
+
+
+
+
+
+
