@@ -53,7 +53,43 @@ Compiler: compilation genenerates assembly code (.s files) for the hardware arch
 * Global Symbols   , can be refrenced by other modules
 * External Symbols , keyword(extern)
 * Local Symbols    , keyword(static)
+
+#### Symbol table:
+* [objdump -t file.o]
+* [nm file.o]
+#### Static Linker :
+* static linking -> gcc -- static file1.o file2.o -o fileexe
+1. strong symbol : finction name - initiate globale
+2. weak   symbol : uninitiate globale
+ #### Static Linker rules:
+ 1. multiple stronge are not allowed
+ 2. when there is strong and weak symbol choose strong
+ 3. when there are multiple weak choose random one
+
+## 4. Libraries:
+### 1. Static Libraries: 
+to get standard c lib: <br>
+[ar -x /usr/lib/x86_64-linux-gnu/libc.a] <br>
+
+* ar -> library utillity
+* -x -> extract all files to current dir
+* to know num of files: ls | wc
+
+#### To make my static lib :
+1. I made header file (file.h) to pu tdeclariton of functions 
+2. Then get file.o by -> gcc -c *.c
+3. To make the atatic lib, I zip it : [ar -rs libanyname.a file1.o file2.o file3.o ]
+4. then I put my file.c in driver(folder)
+5. I will manchin where is header file path (I), in my case "gcc -c main.c -I../"
+6. to run the programe we need to mention to the lib [gcc main.o -o myexe -lfile -L../]
+7. run it [./myexe]
  
+#### To make my dynamic lib :
+1. To make dynamic lib [gcc -shared *.o -o libmohamed.so]
+2. go to driver folder to link main [gcc -c main.c -I../]
+3. to excute it [gcc main.c -o myexe -lmohamed -L../]
+4. we will update innronment var ld path [export LD_PATH=$LD_LIBRARY_PATH:/home/mohamed/hello_c/linking/dynamoclib]
+6 . 
 
 
 
