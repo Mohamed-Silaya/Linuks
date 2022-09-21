@@ -88,8 +88,8 @@ to get standard c lib: <br>
 1. To make dynamic lib [gcc -shared *.o -o libmohamed.so]
 2. go to driver folder to link main [gcc -c main.c -I../]
 3. to excute it [gcc main.c -o myexe -lmohamed -L../]
-4. we will update innronment var ld path [export LD_PATH=$LD_LIBRARY_PATH:/home/mohamed/hello_c/linking/dynamoclib]
-6 . 
+4. we will update innronment var ld path  -> <br>[export LD_PATH=$LD_LIBRARY_PATH:/home/mohamed/hello_c/linking/dynamoclib]
+
 
 
 
